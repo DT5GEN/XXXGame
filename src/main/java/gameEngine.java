@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class gameEngine {
 
     public static final char HUMAN_DOT = 'X';
@@ -22,11 +24,17 @@ public class gameEngine {
 
     public static void printMap() {
         for (int y = 0; y < mapSizeY; y++) {
+            System.out.print((y + 1) + "| ");
             for (int x = 0; x < mapSizeX; x++) {
                 System.out.print(map[y][x] + " | ");
             }
             System.out.println();
             }
+
+    }
+
+
+    public static void humanStep(String[] args) {
 
     }
 
