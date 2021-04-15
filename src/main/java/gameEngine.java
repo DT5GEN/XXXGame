@@ -1,10 +1,13 @@
 import java.sql.SQLOutput;
+import java.util.Scanner;
 
 public class gameEngine {
 
     public static final char HUMAN_DOT = 'X';
     public static final char PC_DOT = 'O';
     public static final char EMPTY_DOT = '_';
+
+    public static final Scanner SCANNER = new Scanner(System.in);
 
     public static char  [][] map;
     public static int mapSizeX;
@@ -35,7 +38,18 @@ public class gameEngine {
 
 
     public static void humanStep(String[] args) {
+        int x;
+        int y;
 
+        System.out.println(" Введите свои координаты: ");
+        x = SCANER.nextInt();
+        y = SCANER.nextInt();
+
+        if () {
+            map[y][x] = HUMAN_DOT;
+
+
+        }
     }
 
 
@@ -43,6 +57,17 @@ public class gameEngine {
 
         initMap();
         printMap();
+
+    }
+
+    public static boolean isValidCell (int y, int x) {
+        return x >=0 && x < mapSizeX && y >= 0 && y < mapSizeY;
+
+    }
+
+    public static boolean isFreeCell (int y, int x) {
+        return map[y][x] == EMPTY_DOT;
+
 
     }
 }
