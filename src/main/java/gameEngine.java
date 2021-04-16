@@ -129,7 +129,7 @@ public class gameEngine {
                 break;
             }
             if (isMapFull()) {
-                System.out.println("РќРёС‡СЊСЏ!!!");
+                System.out.println("Ничья!!!");
                 break;
             }
         }
