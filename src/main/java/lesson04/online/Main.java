@@ -25,6 +25,12 @@ public class Main {
         System.out.println("Это что за покемон? - " + car2.model);
         System.out.println("Колёс -  - " + car2.countWheels);
         System.out.println(car2.color + " цвета." );
+
+        car1.move();
+        car1.beep();
+        car2.move();
+        car2.beep();
+
     }
 
 
