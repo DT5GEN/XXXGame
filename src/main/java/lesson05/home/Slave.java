@@ -28,8 +28,61 @@ public class Slave {
         this.birthYear = birthYear;
         this.name = name;
         this.surname = surname;
+        this.secondName = secondName;
+        this.position = position;
+        this.phone = phone;
+        this.salary = salary;
+        this.uid = ++id;
+    }
 
+
+    int getAge(){
+        return CURRENT_YEAR - birthYear;
 
     }
+
+    int getSalary() {
+        return  (int) salary;
+    }
+
+    void setSalary(float difference) {
+        this.salary = salary + difference;
+    }
+
+    void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    String getSecondName() {
+        return secondName;
+    }
+
+    String getName() {
+        return name;
+    }
+
+    String getSurname() {
+        return surname;
+    }
+
+    String getPosition() {
+        return position;
+    }
+
+    String getPhone() {
+        return phone;
+    }
+
+    String getFullInfo() {
+        return  this.uid + " " + this.name + " " +
+                this.secondName + " " +
+                this.surname + ", " +
+                this.getAge() + " years old, " +
+                this.position + ". Phone number: " +
+                this.phone + ". Salary is " +
+                this.getSalary() + " USD.";
+
+    }
+
 }
 
